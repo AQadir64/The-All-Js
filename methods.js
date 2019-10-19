@@ -67,3 +67,15 @@ let journal = [
 c("cocunut".slice(3))
 c("cocunut".indexOf("n"))
 c("     trim    \n   ".trim())
+c(String(6).padStart(3,"0"))
+
+let sentence = "hello world mann"
+let word = sentence.split(" ")
+c(word)
+c(word.join(". "))
+c("ha".repeat(3))
+
+let strr = "abc"
+c(str.length)
+
+c(str[2])

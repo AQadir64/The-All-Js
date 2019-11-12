@@ -41,3 +41,4 @@ const normalize2 = (value) => {
 }
 
 normalize2.call({coords : [1,2,3], length: 5})
+

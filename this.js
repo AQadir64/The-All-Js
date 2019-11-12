@@ -128,9 +128,49 @@ let group = {
 
   showList() {
     this.students.forEach(student => {
-        console.log(this.title + ":" + student)
+      console.log(this.title + ":" + student);
     });
   }
 };
 
-group.showList()
+group.showList();
+
+//////////////////////////////////////////////
+
+function Cat(name) {
+  this.name = name;
+  console.log(this); // Cat {name: "felix"}
+}
+let cat = new Cat("tom"); // Cat {name: "felix"}
+
+console.log(cat);
+
+function food(kind) {
+  this.kind = kind;
+  this.cook = cook; // functions are hoisted, so it's perfectly
+  // fine to call or assign function names
+  // before they are defined.
+  function cook(sec) {
+    let that = this;
+    setTimeout(function() {
+      console.log(that.kind + " cooked for " + sec + " seconds.");
+    }, sec * 1000);
+  }
+}
+
+let soup = new food("soup"); // <--- this.kind = "soup"
+soup.cook(2); // undefined cooked for 2 seconds.
+
+function delivery(food) {
+  this.food = food;
+  this.deliveryTime = deliveryTime;
+
+  function deliveryTime(sec) {
+    setTimeout(() => {
+      console.log(this.food + " will take " + sec + "mins to deliver");
+    }, sec * 1000);
+  }
+}
+
+let pizza = new delivery("pizza");
+pizza.deliveryTime(4);

@@ -4,7 +4,7 @@ const fetchButton = document.querySelector("#fetch");
 const form = document.querySelector("#new-post form");
 const listposts = document.querySelector("ul");
 
-const xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest(("Content-type": "application/json"));
 
 xhr.responseType = "json";
 

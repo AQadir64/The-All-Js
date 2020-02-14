@@ -1,4 +1,6 @@
-class ProjectList {
+import { ProjectItem } from "./ProjectItem.js";
+import * as DOMH from "../utilities/DomHelper.js";
+export class ProjectList {
   projects = [];
 
   constructor(type) {
@@ -55,7 +57,7 @@ class ProjectList {
 
   addProject(project) {
     this.projects.push(project);
-    DOMHelper.moveElement(project.id, `#${this.type}-projects ul`);
+    DOMH.moveElement(project.id, `#${this.type}-projects ul`);
     project.update(this.switchProject.bind(this), this.type);
   }
 

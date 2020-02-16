@@ -1,0 +1,14 @@
+{
+  "name": "modules-starting-project",
+  "version": "1.0.0",
+  "description": "javaScript webpack complete guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ayin_qoph",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}

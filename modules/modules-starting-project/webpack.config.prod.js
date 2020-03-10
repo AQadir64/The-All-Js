@@ -3,15 +3,16 @@
 
 // eslint-disable-next-line no-undef
 const path = require("path");
-const cleanPlugin = require("clean-webpack-plugin")
-// eslint-disable-next-line no-undef
+
+// eslint-disable-next-line no-unused-vars
+const cleanPlugin = require("clean-webpack-plugin");// eslint-disable-next-line no-undef
 module.exports = {
-  mode: "development",
+  mode: "production",
   // eslint-disable-next-line sort-keys
-  devtool: "cheap-module-eval-source-map",
+  devtool: "cheap-source-map",
   entry: "./src/app.js",
   output: {
-    filename: "app.js",
+    filename: "[contenthash].js",
     path: path.resolve(__dirname, "assets", "scripts"),
     publicPath: "assets/scripts/"
   },
@@ -20,5 +21,4 @@ module.exports = {
     contentBase: "./"
   },
   plugins : [new cleanPlugin.CleanWebpackPlugin()]
-
 };
